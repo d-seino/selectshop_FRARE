@@ -59,19 +59,19 @@ nav span.navbar-text {
     background: #eeeeee !important;
 }
 
-.navbar-brand {
+/* .navbar-shop-box {
     position: fixed;
-}
+} */
 
-.s {
+.navbar-shop-box__title--m {
     position: relative;
     font-family: 'Roboto', sans-serif;
-    font-size: 2.0rem;
+    font-size: 2rem;
     /* font-weight: lighter; */
     color: #937218 !important;
 }
 
-.f {
+.navbar-shop-box__title--l {
     position: relative;
     /* left: 180px; */
     font-family: 'Roboto', sans-serif;
@@ -231,10 +231,10 @@ dd svg.svg-inline--fa {
     float: right;
     justify-content: center;
     align-items: center;
-    max-width: 470px;
+    code
+    object-fit: cover;
     margin: 0 auto;
     padding: 20px;
-    height: 350px;
 }
 
 /* footer */

@@ -20,9 +20,9 @@
 <body>
     <!-- start navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
-        <span class="navbar-text">
-            <a class="navbar-brand s" href="#">Select Shop</a>
-            <a class="navbar-brand f" href="#">FLARE</a>
+        <span class="navbar-shop-box">
+            <a class="navbar-shop-box__title--m" href="#">Select Shop</a>
+            <a class="navbar-shop-box__title--l" href="#">FLARE</a>
         </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
@@ -138,13 +138,19 @@
                                 </dd>
                             </dl>
                         </div>
-                        <img src="images/img1.jpg" alt="...">
+                        <div>
+                            <img src="images/img1.jpg" class="img-fluid" alt="...">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- end shop -->
+
+    <!-- 1.メディアクエリを使って指定する
+         2.float使わずに、display: flex;などのFlexboxで全体を構成する
+    -->
 
     <!-- start footer -->
     <footer>
