@@ -1,0 +1,335 @@
+@media screen and (max-width:768px){
+body {
+	font-size:14px;
+}
+
+.only_pc{
+	display:none !important;
+}
+.only_smart{
+	display:block !important;
+}
+.only_smart_i{
+	display:inline-block !important;
+}
+
+
+/******************************
+
+ヘッダー
+
+******************************/
+header{
+	width:100%;
+	height:50px;
+	padding:0 3%;
+	position:fixed;
+	z-index:100;
+    background-color: #eeeeee;
+}
+header.shadow{
+	box-shadow: 0 0 5px rgba(0,0,0,0.4) !important;
+}
+header div{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+header div h1 a{
+	font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight:normal;
+}
+header div h1 a span{
+	margin-right:5px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+}
+header div nav ul{
+	width:100%;
+	padding-top:0;
+	text-align:center;
+	position:fixed;
+	left:0;
+	top:50px;
+	background-color:#fff;
+	display:none;
+}
+header div nav ul li{
+	margin:0;
+	display:block;
+	border-bottom:1px dotted #937218;
+}
+header div nav ul li:last-child{
+	border-bottom:none;
+}
+header div nav ul li a{
+	display:block;
+	line-height:60px;
+	padding:0;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size:16px;
+	letter-spacing:0.12em;
+	position:static;
+}
+header div nav ul li a:after{
+	content:none;
+}
+header div nav ul li a:hover{
+	opacity:1;
+	color: #888;
+}
+header div nav ul li a:hover:after{
+	content:none;
+}
+
+
+/******************************
+
+ 三本線ボタン
+
+******************************/
+/* smart_nav */
+#btnmenu{
+	width:40px;
+	height:42px;
+	margin:0;
+	padding:0;
+	position:relative;
+	cursor:pointer;
+}
+
+#btnmenu span{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 28px;
+	height: 4px;
+	margin: -3px 0 0 -14px;
+	background: #937218;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+#btnmenu span:before,
+#btnmenu span:after{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 28px;
+	height: 4px;
+	background: #937218;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+#btnmenu span:before{
+	margin-top: -12px;
+}
+
+#btnmenu span:after{
+	margin-top: 8px;
+}
+
+#btnmenu .close{
+	background: transparent;
+	width:42px;
+	height:40px;
+	margin-top:-20px;
+	margin-left:-20px;
+}
+
+#btnmenu .close:before,
+#btnmenu .close:after{
+	margin-top: 0;
+}
+
+#btnmenu .close:before{
+	width: 28px;
+	height: 3px;
+	margin: -2px 0 0 6px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+#btnmenu .close:after{
+	width: 28px;
+	height: 3px;
+	margin: -2px 0 0 6px;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+
+/******************************
+
+ コンテンツ
+
+******************************/
+article{
+	padding-top:50px;
+}
+
+
+/* #mv */
+#mv{
+	width:90%;
+}
+#mv #slick img {
+	border-radius:0 20px 20px 0;
+}
+
+
+/* .cont */
+.cont{
+	padding:15% 0 10%;
+}
+.cont h2{
+	margin-bottom:50px;
+	font-family: \\6E38\660E\671D\4F53,'Sorts Mill Goudy', serif;
+	font-size:24px;
+	font-weight: 500;
+    text-transform: uppercase;
+}
+.cont h2:after{
+	content:'';
+	display:block;
+	width:30px;
+	height:3px;
+	background-color:#937218;
+	margin:20px auto 0;
+}
+
+
+/* #concept */
+#concept p{
+	font-size:14px;
+	line-height:4;
+}
+
+
+/* #instagram */
+#instagram{
+}
+#instagram li{
+	width:40%;
+}
+/* 前へ/次へナビゲーションの大きさと色 */
+#instagram #insta_slick .slick-prev:before,
+#instagram #insta_slick .slick-next:before {
+	font-size:20px;
+}
+#instagram #insta_slick .slick-next{
+	margin-right:-48%;
+}
+
+
+/* #shop */
+#shop{
+}
+
+#shop dl{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:left;
+	color:#888;
+	margin-right:0;
+}
+#shop dl dt{
+	letter-spacing:0.08em;
+	float:left;
+}
+#shop dl dd{
+	margin-bottom:20px;
+	padding-left:100px;
+	letter-spacing:0.03em;
+}
+#shop dl dd a.map{
+	display:inline-block;
+	margin-top:10px;
+	text-decoration:underline;
+}
+#shop dl dd a.tel{
+	pointer-events:auto;
+	color:#937218;
+	text-decoration:underline;
+}
+#shop dl dd ul li{
+	display:inline-block;
+	vertical-align:bottom;
+	margin-right:20px;
+}
+#shop dl dd ul li a{
+	text-decoration:underline;
+}
+#shop dl dd ul li a i{
+	font-size:25px;
+}
+#shop dl + img{
+	max-width:450px;
+	width:90%;
+}
+
+
+/* footer */
+footer {
+    padding: 20px 0;
+    border-top:1px solid #937218;
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+}
+
+
+/* TOPへ戻るボタン */
+#page_top {
+    width: 40px;
+    line-height: 40px;
+    position: fixed;
+    right: -50px;
+    bottom: 50px;
+    background: #937218;
+    opacity: 0.6;
+    border-radius: 50%;
+    color:#fff;
+    font-size:21px;
+    -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+}
+
+
+
+
+@media screen and (max-width:480px){
+#shop dl{
+}
+#shop dl dt{
+	letter-spacing:0.08em;
+	float:none;
+	font-weight:bold;
+}
+#shop dl dd{
+	margin-bottom:10px;
+	padding-left:0em;
+	letter-spacing:0.03em;
+}
+#shop dl dd > a{
+	margin-top:0;
+}
+}

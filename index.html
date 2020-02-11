@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ↓charsetからformat-detectionまでは毎回同じですので、とりあえずは「呪文」としてコピペすればOKです -->
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- ↓description（ページ概要）とtitle（ページタイトル）は検索上重要な情報でこの情報によって検索にヒットする・しないが変わってきます。 -->
+	<meta name="description" content="">
+	<title>Select Shop FLARE セレクトショップ フレア</title>
+	
+	<!-- ↓このcssがブラウザのデフォルトの設定を「適度に」リセットしてくれてコーディング作業が楽になります -->
+	<link rel="stylesheet" href="resources/css/sanitize.css">
+	
+    <!-- ↓ページレイアウトを定義するcss。base.cssがPCレイアウト(768px以上)、base_s.cssがスマホレイアウト（768px以下）のcssです。 -->
+	<link rel="stylesheet" href="resources/css/base.css">
+	<link rel="stylesheet" href="resources/css/base_sp.css">
+	
+	<!-- ↓カルーセルのレイアウトを定義するcss。私はSlickスライダーというスライダープログラムを使うことが多いです。 -->
+	<link rel="stylesheet" href="resources/slick/slick.css" />
+	<link rel="stylesheet" href="resources/slick/slick-theme.css" />
+	
+	<!-- アイコンフォント -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+	
+	<!-- favicon指定 -->
+	<link rel="icon" href="favicon.ico">
+	
+	<!-- ↓jqueryのプログラムを動作させるライブラリファイルです。 -->
+	<script src="resources/js/jquery-1.11.2.min.js"></script>
+	
+	<!-- ↓ここにjqueryのプログラムを格納しています。 -->
+	<script type="text/javascript" src="resources/js/config.js"></script>
+	
+	<!-- ↓ページ内リンクでスルスルとスクロール移動させるためのライブラリ。 -->
+	<script type="text/javascript" src="resources/js/smoothScroll.js"></script>
+	
+	<!-- ↓カルーセルSlickのプログラム本体です。 -->
+	<script src="resources/slick/slick.min.js"></script>
+	
+	<!-- ↓ホームページ制作ではどのブラウザでもレイアウトが崩れず同じ様に表示させる必要がありますが、昔からIEだけは他のブラウザと挙動が異なることがあるため、それを補正してくれるプログラムを入れる必要があります。ただ昔のバージョンのIE用なので、これを設定する必要は既に無くなっているかもしれません -->
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="resources/js/html5shiv.js"></script>
+	<![endif]-->
+	
+	<!-- ↓Slickでメインビジュアルのフェードインフェードアウトカルーセルを動作させる設定をしています -->
+	<script type="text/javascript">
+	$(function() {
+		$('#slick').slick({
+			autoplay: true,
+			autoplaySpeed: 4000,
+			speed: 1000,
+			infinite: true,
+			fade:true,
+			arrows: false, 
+			dots: false,
+			pauseOnHover: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			cssEase: 'linear',
+			swipe:false
+		});
+	});
+	</script>
+</head>
+
+<body>
+<!-- #wrapper ページ全体をdivタグで囲っておくと後々役に立つことがあるので、このようにする人が多いです。  -->
+<div id="wrapper">
+	<header>
+		<div>
+			<h1><a href="#"><span>Select Shop</span>FLARE</a></h1>
+			
+			<nav>
+				<!-- ↓スマホレイアウト時の三本線ボタン部分 -->
+				<div id="btnmenu" class="only_smart"><span></span></div>
+				
+				<ul>
+					<li><a href="#concept">CONCEPT</a></li>
+					<li><a href="#instagram">INSTAGRAM</a></li>
+					<li><a href="#shop">SHOP</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	
+	<article>
+		<!-- メインビジュアル -->
+		<div id="mv">
+			<div id="slick">
+				<div class="img1"><img src="resources/images/s-2.jpg" alt="店内"></div>
+				<div class="img2"><img src="resources/images/s-3.jpg" alt="店舗外観"></div>
+			</div>
+		</div>
+		<!-- /メインビジュアル -->
+		
+		
+		<!-- concept -->
+		<section id="concept" class="cont">
+			<h2>CONCEPT</h2>
+			
+			<p>エレガンスとカジュアルを取り入れた<br />ベーシックな大人のリアルクローズ</p>
+		</section>
+		<!-- /concept -->
+		
+		
+		<!-- instagram -->
+		<section id="instagram" class="cont">
+			<h2>INSTAGRAM</h2>
+			
+			<ul id="insta"></ul>
+			
+			<div id="insta_slick" style="margin-top:50px;"></div>
+		</section>
+		<!-- /instagram -->
+		
+		
+		<!-- shop -->
+		<section id="shop" class="cont">
+			<h2>SHOP</h2>
+			
+			<dl>
+				<dt>NAME</dt>
+				<dd>Select Shop FLARE</dd>
+				
+				<dt>ADDRESS</dt>
+				<!-- ↓Googleマップにお店の情報が登録されておりましたので、そちらのリンク先にしております。 -->
+				<dd>〒064-0801<br />北海道札幌市中央区南1条西21丁目1-10<br /><a href="https://www.google.com/maps/place/Select+Shop+FLARE+%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97+%E3%83%95%E3%83%AC%E3%82%A2/@43.0558456,141.3236688,17z/data=!3m1!4b1!4m5!3m4!1s0x5f0b2959e7ecb0db:0xe08d5c8da3819c32!8m2!3d43.0558417!4d141.3258628?hl=ja" target="_blank" class="map">Google map</a></dd>
+				
+				<dt>TEL</dt>
+				<dd><a href="tel:0112137556" class="tel">011-213-7556</a></dd>
+				
+				<dt>OPEN</dt>
+				<dd>11:00～19:00</dd>
+				
+				<dt>CLOSE</dt>
+				<dd>第1・3月曜日</dd>
+				
+				<dt>SNS</dt>
+				<dd>
+					<ul>
+						<li><a href="https://www.instagram.com/s.flare121/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://line.me/ti/p/ZKXttCcZLD" target="_blank"><i class="fab fa-line"></i></a></li>
+						<li><a href="https://ameblo.jp/s-flare121/" target="_blank">Ameba Blog</a></li>
+					</ul>
+				</dd>
+			</dl>
+			
+			<img src="resources/images/img1.jpg" alt="店舗">
+		</section>
+		<!-- /shop -->
+		
+	</article>
+	
+	
+    <footer>
+        &copy; 2020 Select Shop FLARE
+    </footer>
+
+    <!-- TOPへ戻るボタン -->
+    <a href="#wrapper" id="page_top"><i class="fas fa-angle-double-up"></i></a>
+
+</div>
+<!--/#wrapper-->
+</body>
+</html>

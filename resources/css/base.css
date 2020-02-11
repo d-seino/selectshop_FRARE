@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP|Roboto:300|Sorts+Mill+Goudy&display=swap');
+
+body {
+	font-family: 'Noto Serif JP', serif;
+	font-size:15px;
+	line-height:1.6;
+	text-align:center;
+	color: #937218;
+    background-color: #eeeeee;
+}
+.roboto{
+	font-family: 'Roboto', sans-serif;
+}
+.sorts_mill_goudy{
+	font-family: 'Sorts Mill Goudy', serif;
+}
+
+a {
+	color: #937218;
+	-webkit-transition : all 0.4s;
+	transition : all 0.4s;
+}
+a:hover {
+	opacity:0.7;
+}
+
+img{
+	max-width:100%;
+}
+
+.only_smart,
+.only_smart_i{
+	display:none !important;
+}
+
+
+#wrapper{
+}
+
+/******************************
+
+ ヘッダー
+
+******************************/
+header{
+	width:100%;
+	height:100px;
+	padding:0 20px;
+	position:fixed;
+	left:0;
+	z-index:100;
+    background-color: #eeeeee;
+}
+header.shadow{
+	box-shadow: 0 0 5px rgba(0,0,0,0.4) !important;
+}
+header div{
+	max-width:1440px;
+	margin:auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+header div h1 a{
+	font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight:normal;
+}
+header div h1 a span{
+	margin-right:15px;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+}
+header div nav ul{
+	width:340px;
+	padding-top:20px;
+	text-align:right;
+}
+header div nav ul li{
+	margin:0 4px;
+	display: inline-block;
+}
+header div nav ul li a{
+	display:block;
+	padding:0 8px;
+	font-family: 'Sorts Mill Goudy', serif;
+	letter-spacing:0.12em;
+	position:relative;
+}
+header div nav ul li a:after{
+	content:'';
+	display:block;
+	width:100%;
+	height:2px;
+	background-color:#888;
+	position:absolute;
+	top:100%;
+	left:0;
+	opacity:0;
+	-webkit-transition : all 0.3s;
+	transition : all 0.3s;
+}
+header div nav ul li a:hover{
+	opacity:1;
+	color: #888;
+}
+header div nav ul li a:hover:after{
+	content:'';
+	top:135%;
+	opacity:1;
+	-webkit-transition : all 0.3s;
+	transition : all 0.3s;
+}
+
+
+
+/******************************
+
+コンテンツ
+
+******************************/
+article{
+	max-width:1440px;
+	margin:auto;
+	padding-top:100px;
+}
+
+
+/* #mv */
+#mv{
+	width:80%;
+}
+#mv #slick img {
+	display:none;
+}
+#mv #slick .img1,
+#mv #slick .img2 {
+	height:calc(100vh - 100px);
+	border-radius:0 30px 30px 0;
+}
+#mv #slick .img1{
+	background:url(../images/s-2.jpg)no-repeat center top;
+	background-size:cover;
+}
+#mv #slick .img2{
+	background:url(../images/s-3.jpg)no-repeat center top;
+	background-size:cover;
+}
+
+@media screen and (max-width:1023px){
+#mv #slick img {
+	display:block;
+	width:100%;
+	border-radius:0 30px 30px 0;
+}
+#mv #slick .img1,
+#mv #slick .img2 {
+	height:auto;
+	border-radius:0;
+	background-image:none;
+}
+}
+
+
+/* .cont */
+.cont{
+	padding:150px 0 100px;
+}
+.cont h2{
+	margin-bottom:100px;
+	font-family: \\6E38\660E\671D\4F53, serif;
+	font-size:32px;
+	font-weight: 500;
+    text-transform: uppercase;
+}
+.cont h2:after{
+	content:'';
+	display:block;
+	width:50px;
+	height:3px;
+	background-color:#937218;
+	margin:30px auto 0;
+}
+
+
+/* #concept */
+#concept p{
+	font-size:16px;
+	line-height:4;
+}
+
+
+/* #instagram */
+#instagram{
+	overflow:hidden;
+}
+#instagram li{
+	width:20%;
+	margin:1%;
+	display:inline-block;
+}
+#instagram #insta_slick{
+	width:70%;
+	margin:auto;
+}
+#instagram #insta_slick a{
+	outline:none;
+}
+#instagram #insta_slick .slick-list{
+	overflow:visible;
+}
+/* 前へ/次へナビゲーションの大きさと色 */
+#instagram #insta_slick .slick-prev:before,
+#instagram #insta_slick .slick-next:before {
+	font-size:30px;
+	opacity: .85;
+	color: #fff;
+	text-shadow:0 0 5px rgba(0,0,0,0.4);
+}
+#instagram #insta_slick .slick-prev{
+	left: 50%;
+	margin-left:-48%;
+	z-index:10;
+}
+#instagram #insta_slick .slick-next{
+	right: 50%;
+	margin-right:-47%;
+	z-index:11;
+}
+/* ドットナビゲーションの色 */
+#instagram #insta_slick .slick-dots li button:before {
+	opacity: .25;
+	color:#000;
+}
+/* 現在表示しているスライドのドットナビゲーションの色 */
+#instagram #insta_slick .slick-dots li.slick-active button:before{
+	opacity: .75;
+	color:#000;
+}
+#instagram #insta_slick .slick-dots li{
+	width:auto !important;
+	margin:0 0px !important;
+	padding:;
+}
+.slick-dots li button{
+	width:16px !important;
+	padding:0; !important;
+}
+
+
+
+
+/* #shop */
+#shop{
+}
+
+#shop dl{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:left;
+	color:#888;
+	margin-right:6%;
+}
+@media screen and (max-width:1023px){
+#shop dl{
+	margin-right:0;
+}
+}
+#shop dl dt{
+	letter-spacing:0.08em;
+	float:left;
+}
+#shop dl dd{
+	margin-bottom:20px;
+	padding-left:150px;
+	letter-spacing:0.03em;
+}
+#shop dl dd a.map{
+	display:inline-block;
+	margin-top:10px;
+	text-decoration:underline;
+}
+#shop dl dd a.tel{
+	pointer-events:none;
+	color:#888;
+}
+#shop dl dd ul li{
+	display:inline-block;
+	vertical-align:bottom;
+	margin-right:20px;
+}
+#shop dl dd ul li a{
+	text-decoration:underline;
+}
+#shop dl dd ul li a i{
+	font-size:25px;
+}
+#shop dl + img{
+	width:450px;
+}
+
+
+@media screen and (max-width:1023px){
+#shop dl + img{
+	display:block;
+	margin:30px  auto 0;
+}
+}
+
+
+
+/* footer */
+footer {
+    padding: 40px 0;
+    border-top:1px solid #937218;
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+}
+
+
+/* TOPへ戻るボタン */
+#page_top {
+    width: 50px;
+    line-height: 50px;
+    position: fixed;
+    right: -50px;
+    bottom: 50px;
+    background: #937218;
+    opacity: 0.6;
+    border-radius: 50%;
+    color:#fff;
+    font-size:26px;
+    -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
